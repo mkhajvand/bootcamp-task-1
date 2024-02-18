@@ -1,0 +1,125 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* root variables */
+:root {
+  --btn-color: #219f95;
+  --color-primary: #234894;
+  --color-secondary: #afcedd;
+}
+html {
+  font-size: 62.5%;
+}
+.container {
+  max-width: 1280px;
+  max-height: 100vh;
+}
+.block {
+  padding: 5rem;
+}
+.ticket-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem;
+}
+@media screen and (min-width: 768px) {
+  .ticket-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .ticket-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+h1 {
+  font-size: 2.2rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 1.6rem;
+}
+span {
+  font-size: 1.2rem;
+}
+.section__title {
+  font-weight: 700;
+  margin-bottom: 8rem;
+}
+.ticket__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.7rem;
+}
+.ticket__subject {
+  display: flex;
+  align-items: center;
+}
+.ticket__subject span {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1.8rem;
+}
+.ticket__subject h3 {
+  color: var(--color-primary);
+  margin-right: 1rem;
+}
+.ticket__date {
+  color: #696969;
+}
+.ticket__title {
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+.ticket__id {
+  color: #696969;
+  margin-bottom: 1.7rem;
+  display: block;
+}
+.ticket__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ticket__author {
+  display: flex;
+  align-items: center;
+}
+.ticket__author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.ticket__author h3 {
+  margin-right: 1rem;
+}
+.ticket__view {
+  background-color: var(--btn-color);
+  color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  border: 0;
+  font-size: 1.6rem;
+  white-space: nowrap;
+}
+@media screen and (min-width: 1024px) {
+  .ticket__view {
+    font-size: 1.4rem;
+  }
+  .ticket__author h3 {
+    font-size: 1.2rem;
+  }
+}
